@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>FAQ</title>
+   <style>
+     body {
+     font-family: Arial, sans-serif;
+  }
+
+  .faq-wrapper {
+     max-width: 800px;
+     margin: 0 auto;
+     padding: 20px;
+  }
+
+  .faq-header {
+     text-align: center;
+     font-size: 24px;
+     font-weight: bold;
+     margin-bottom: 20px;
+  }
+
+  .faq-categories {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+  }
+
+  .faq-category-button {
+     background-color: #fff;
+     color: #000;
+     padding: 10px;
+     font-weight: bold;
+     cursor: pointer;
+     transition: background-color 0.3s;
+  }
+
+  .faq-category-button:hover {
+     background-color: #ff80bf;
+     color: #fff;
+  }
+
+  .faq-questions {
+     margin-top: 20px;
+  }
+
+  .faq-question {
+     display: flex;
+     align-items: center;
+     cursor: pointer;
+     margin-bottom: 10px;
+  }
+
+  .faq-question-arrow {
+     margin-right: 10px;
+     font-weight: bold;
+  }
+
+  .faq-answer {
+     display: none;
+     margin-left: 20px;
+  }
+
+  .faq-answer.show {
+     display: block;
+  }
+  </style>
+</head>
+<body>
+   <div class="faq-wrapper">
+      <h1 class="faq-header">FAQ</h1>
+        <div class="faq-categories">
+     <div class="faq-category-button">자주 묻는 질문</div>
+     <div class="faq-category-button">회원정보 관련 질문</div>
+     <div class="faq-category-button">공연 관련 질문</div>
+     <div class="faq-category-button">이벤트 관련 질문</div>
+     <div class="faq-category-button">이용 관련 질문</div>
+  </div>
+
+  <div class="faq-questions">
+     <div class="faq-question" onclick="toggleAnswer(1)">
+        <div class="faq-question-arrow">&#9660;</div>
+
+        1. 질문
+     </div>
+     <div class="faq-answer" id="answer1">
+        답변
+     </div>
+
+     <div class="faq-question" onclick="toggleAnswer(2)">
+        <div class="faq-question-arrow">&#9660;</div>
+        2. 질문
+     </div>
+     <div class="faq-answer" id="answer2">
+        답변
+     </div>
+
+     <div class="faq-question" onclick="toggleAnswer(3)">
+        <div class="faq-question-arrow">&#9660;</div>
+        3. 질문
+     </div>
+     <div class="faq-answer" id="answer3">
+        답변
+     </div>
+
+     <div class="faq-question" onclick="toggleAnswer(4)">
+        <div class="faq-question-arrow">&#9660;</div>
+        4. 질문
+     </div>
+     <div class="faq-answer" id="answer4">
+        답변
+     </div>
+
+     <div class="faq-question" onclick="toggleAnswer(5)">
+        <div class="faq-question-arrow">&#9660;</div>
+        5. 질문
+     </div>
+     <div class="faq-answer" id="answer5">
+        답변
+     </div>
+
+     <div class="faq-question" onclick="toggleAnswer(6)">
+        <div class="faq-question-arrow">&#9660;</div>
+        6. 질문
+     </div>
+     <div class="faq-answer" id="answer6">
+        답변
+     </div>
+  </div>
+
+  <div class="faq-search">
+     <input type="text" placeholder="검색" />
+  </div>
+ </div>
+   <script>
+      function toggleAnswer(id) {
+         var answer = document.getElementById("answer" + id);
+         answer.classList.toggle("show");
+      }
+   </script>
+</body>
+</html>
+
+
